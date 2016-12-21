@@ -1,0 +1,4 @@
+{
+  "presets": ["latest", "react","react-hmre"],
+  "plugins": ["transform-async-to-generator"]
+}

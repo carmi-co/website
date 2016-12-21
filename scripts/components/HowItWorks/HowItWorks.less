@@ -1,0 +1,94 @@
+@import '../../styles/colors.less';
+@import '../../styles/styleguide.less';
+
+.container {
+    font-size: 1rem;
+    padding: 80px 60px 100px;
+    color: @nero;
+}
+
+.main-title {
+    font-size: 2em;
+    flex: 1 auto;
+    min-width: 100%;
+    height: 30px;
+    text-align: center;
+    margin-bottom: 24px; 
+}
+
+.text-color-branded {
+    color: @turquoise;
+}
+
+.text {
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 112px;
+}
+
+.list-steps {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.column {
+    flex: 1 auto;
+    max-width: 24%;
+    padding: 160px 8px 8px;
+    position: relative;
+    text-align: center;
+
+    &:before {
+        content: "";
+        height: 120px;
+        width: 120px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        }
+}
+
+.column-car {
+    composes: column;
+
+    &:before {
+        background: url('/scripts/components/HowItWorks/icon-car.png') no-repeat center top;
+    }
+}
+
+.column-hands {
+    composes: column;
+
+    &:before {
+        background: url('/scripts/components/HowItWorks/icon-hands.png') no-repeat center top;
+    }
+}
+
+.column-share {
+    composes: column;
+
+    &:before {
+        background: url('/scripts/components/HowItWorks/icon-share.png') no-repeat center top;
+    }
+}
+
+.column-text {
+    font-size: 16px;
+    align-self: flex-end;
+}
+
+.column-title {
+    margin-bottom: 12px;
+    height: 100px;
+    text-align: center;   
+
+}
+
+.image {
+    text-align: center;
+    margin-bottom: 24px;
+    max-height: 60px;
+}

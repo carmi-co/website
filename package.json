@@ -4,7 +4,10 @@
   "description": "Carmi website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "delete-dist": "rm -rf dist",
+    "server": "webpack-dev-server --progress --inline --hot",
+    "build": "npm run delete-dist && npm run server",
+    "start": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -18,5 +21,31 @@
   "bugs": {
     "url": "https://github.com/inmotionventures/carmi/issues"
   },
-  "homepage": "https://github.com/inmotionventures/carmi#readme"
+  "homepage": "https://github.com/inmotionventures/carmi#readme",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-async-to-generator": "^6.16.0",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "css-less-loader": "^0.1.0",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "resolve-url-loader": "^1.6.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-css-modules": "^4.1.0",
+    "react-dom": "^15.4.1",
+    "react-router": "^3.0.0"
+  }
 }

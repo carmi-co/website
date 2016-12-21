@@ -1,0 +1,117 @@
+@import '../../styles/colors.less';
+@import '../../styles/styleguide.less';
+
+.container {
+    font-size: 1rem;
+    color: @nero;
+    padding: 80px 60px 100px;
+    border-top: 1px @light-grey solid;
+    border-bottom: 1px @light-grey solid;
+    background: url('/scripts/components/HowMuchCanIEarn/computer.png') no-repeat;
+    background-position: 0 0;
+    overflow: hidden;
+}
+
+.content {
+    max-width: 50%;
+    text-align: center;
+    margin-bottom: 60px;
+    float: right;
+    
+}
+
+.main-title {
+    font-size: 3em;
+    min-width: 100%;
+    text-align: center;
+    margin-bottom: 42px; 
+}
+
+.text-color-branded {
+    color: @turquoise;
+}
+
+.text-content {
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.input-box {
+    width: 100%;
+    padding: 12px 8px;
+    border-radius: 4px;
+    border: 1px @nero solid;
+    font-size: 1em;
+}
+
+.input-radio {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.label {
+    display: block;
+    margin: auto;
+    font-size: 1em;
+    margin-bottom: 8px;
+}
+
+.action-form {
+    composes: button;
+    flex: 1 auto;    
+    background-color: @emerald;
+    max-width: 180px;
+    border-style: none;
+}
+
+.form-top {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.form-bottom {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.form-top-column {
+    flex: 1 auto;
+    max-width: 50%;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.form-title {
+    margin-bottom: 24px;
+}
+
+.input-radio {
+    position: absolute;
+    left: -9999px;
+}
+
+.radio-label {
+    padding: 8px;
+    border-radius: 1px;
+    cursor: pointer;
+    margin: 0 40px;
+}
+
+.input-radio {
+    &:checked + .radio-label {
+        color: white;
+        background: @emerald;
+    }
+    
+    &:focus + .radio-label {
+        color: white;
+        background: @emerald;
+    }
+}
