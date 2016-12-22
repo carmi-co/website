@@ -1,13 +1,16 @@
 @import '../../styles/colors.less';
 @import '../../styles/styleguide.less';
+@import '../../styles/fonts.less';
+
 
 .container {
+    font-family: avenir;
     font-size: 1rem;
     color: @nero;
     padding: 0px 60px 0px;
     padding-top: 80px;
     border-bottom: 1px #AAA solid;
-    background: url('/scripts/components/HowMuchCanIEarn/computer.png') no-repeat bottom left;
+    background: url('/scripts/components/HowMuchCanIEarn/computer2.png') no-repeat bottom left;
     overflow: hidden;
 }
 
@@ -40,7 +43,7 @@
 .input-box {
     width: 100%;
     padding: 12px 8px;
-    border-radius: 4px;
+    border-radius: 0;
     border: 1px @nero solid;
     font-size: 1em;
 }
@@ -77,6 +80,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
+    margin-bottom: 40px;
 }
 
 .form-top-column {
