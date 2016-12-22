@@ -1,0 +1,73 @@
+@import '../../styles/colors.less';
+@import '../../styles/styleguide.less';
+
+.container {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    
+}
+
+.content {
+    padding: 40px 120px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: @mid-grey;
+}
+
+.contact-group {
+    font-size: 0.9em;
+    flex: 1 auto;
+    min-width: 20%;
+    & * {
+        margin-bottom: 8px;
+    }
+}
+
+.menu-group {
+    flex: 1 auto;
+}
+
+.subscribe-group {
+    flex: 1 auto;
+    align-self: center;
+}
+
+.contact-info {
+    font-weight: 400;
+}
+
+.menu {
+    padding-left: 0;
+}
+
+.menu-item {
+    list-style: none;
+    margin-bottom: 8px;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: white;    
+}
+
+.subscribe-form {
+    display: flex;
+}
+
+.subscribe-input {
+    border: 0;
+    height: 38px;
+    flex: 1 auto;
+    padding: 4px 8px;
+}
+
+.action {
+    composes: button;
+    border-radius: 0;
+    flex: 1 auto;
+    height: 46px;
+    padding: 4px 8px;
+    cursor: pointer;
+}

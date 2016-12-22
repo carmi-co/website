@@ -5,6 +5,7 @@ import HowMuchCanIEarn from '../HowMuchCanIEarn/HowMuchCanIEarn';
 import AvailableCars from '../AvailableCars/AvailableCars';
 import Feedback from '../Feedback/Feedback';
 import Footer from '../Footer/Footer';
+import ContactMenu from '../ContactMenu/ContactMenu'
 
 
     const feedbacks = [
@@ -26,6 +27,7 @@ function Home () {
             <Feedback 
             feedbacks={feedbacks}
             />
+            <ContactMenu />
             <Footer />
         </div>
     );
