@@ -4,6 +4,7 @@ import HowItWorks from '../HowItWorks/HowItWorks';
 import HowMuchCanIEarn from '../HowMuchCanIEarn/HowMuchCanIEarn';
 import AvailableCars from '../AvailableCars/AvailableCars';
 import Feedback from '../Feedback/Feedback';
+import Footer from '../Footer/Footer';
 
 
     const feedbacks = [
@@ -25,6 +26,7 @@ function Home () {
             <Feedback 
             feedbacks={feedbacks}
             />
+            <Footer />
         </div>
     );
 }
