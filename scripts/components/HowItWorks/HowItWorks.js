@@ -5,11 +5,11 @@ import styles from './HowItWorks.less';
 import car from "./icon-car.png";
 import hands from "./icon-hands.png";
 import share from "./icon-share.png";
-
+import { Element } from 'react-scroll';
 
 function HowItWorks () {
     return (
-        <section styleName="container">
+        <Element styleName="container" name="how-it-works">
             <h1 styleName="main-title">How <span styleName="text-color-branded">Carmi</span> works</h1>
             <p styleName="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <div styleName="list-steps">
@@ -26,7 +26,7 @@ function HowItWorks () {
                     <p styleName="column-text">Sharing with Carmi can give you a little extra cash to play with every month. Happy drivers, happy Carmi.</p>
                 </section>
             </div>
-        </section>
+        </Element>
     );
 }
 

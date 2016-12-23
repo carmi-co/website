@@ -3,13 +3,12 @@ import { Link } from 'react-router';
 import CSSModules from 'react-css-modules';
 import styles from './HowMuchCanIEarn.less';
 import computer from "./computer.png";
-
-
+import { Element } from 'react-scroll';
 
 function HowMuchCanIEarn () {
     return (
-        <div styleName="container">
-            <div styleName="content">
+        <Element styleName="container" name="how-much">
+            <div styleName="content" >
                 <h1 styleName="main-title">How much <span styleName="text-color-branded">can I earn</span> ?</h1>
                 <p styleName="text-content">Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi enim, venenatis in justo sed.</p>
                 <form action="http://www.carmy-api.com/query">
@@ -35,7 +34,7 @@ function HowMuchCanIEarn () {
                     <input styleName="action-form" type="submit" value="CALCULATE NOW" />
                 </form>
             </div>
-        </div>
+        </Element>
     );
 }
 
