@@ -4,12 +4,14 @@
     font-family: avenir;    
     display: block;
     position: absolute;
+    position: sticky;
     top: 0;
     width: 100%;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 100;
 }
 
 .navbar {
-    background-color: rgba(0, 0, 0, 0.6);    
     display: flex;
     height: 40px;
     padding: 8px 16px;
@@ -30,5 +32,12 @@
     flex: 1 auto;
     align-self: center;
     max-width: 160px;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color 600ms linear;
 }
 

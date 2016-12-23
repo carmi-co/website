@@ -6,7 +6,7 @@ import AvailableCars from '../AvailableCars/AvailableCars';
 import Feedback from '../Feedback/Feedback';
 import Footer from '../Footer/Footer';
 import ContactMenu from '../ContactMenu/ContactMenu'
-
+import NavBar from '../NavBar/NavBar';
 
     const feedbacks = [
         {
@@ -20,6 +20,7 @@ function Home () {
 
     return (
         <div>
+            <NavBar />
             <Hero />
             <HowItWorks />
             <HowMuchCanIEarn />

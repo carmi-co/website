@@ -5,12 +5,11 @@ import styles from './App.less';
 
 
 function App (props) {
-    const userName = 'userName';
     return(
         <div styleName="container">
             <nav role="nav" styleName="navbar">
                 <Link to={'/'} styleName="action-home">carmi</Link>
-                <p styleName="action-user">{userName}</p>
+                <p styleName="phone-number">0203 856 8523</p>
             </nav>
             {props.children}
         </div>

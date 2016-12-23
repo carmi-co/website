@@ -8,10 +8,7 @@ import React from 'react';
 function Routes () {
     return (
         <Router history={browserHistory}>
-            <Route path="/" component={App}>
-                <IndexRoute component={Home}/>
-                <Route path="/about" component={About}/>
-            </Route>
+            <Route path="/" component={Home} />
         </Router>
     );
 }
