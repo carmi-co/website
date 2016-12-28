@@ -23,10 +23,10 @@
 }
 
 .main-title {
-    font-size: 3em;
+    font-size: 2em;
     min-width: 100%;
     text-align: center;
-    margin-bottom: 42px; 
+    margin-bottom: 24px; 
 }
 
 .text-color-branded {
@@ -37,12 +37,12 @@
     font-size: 1em;
     text-align: center;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
 }
 
 .input-box {
     width: 100%;
-    padding: 12px 8px;
+    padding: 18px 8px;
     border-radius: 0;
     border: 1px @nero solid;
     font-size: 1em;
@@ -54,19 +54,22 @@
     border-radius: 4px;
 }
 
-.label {
+.form-label {
     display: block;
     margin: auto;
     font-size: 1em;
     margin-bottom: 8px;
+    font-family: avenirBlack;
 }
 
 .action-form {
     composes: button;
-    flex: 1 auto;    
-    background-color: @emerald;
-    max-width: 180px;
+    flex: 1 auto;
+    background-color: #0be383;
+    border-radius: 1px;
     border-style: none;
+    font-size: .8em;
+    padding: 18px 80px;
 }
 
 .form-top {
@@ -105,6 +108,7 @@
     border-radius: 1px;
     cursor: pointer;
     margin: 0 40px;
+    font-family: avenirBlack;
 }
 
 .input-radio {
@@ -117,4 +121,24 @@
         color: white;
         background: @emerald;
     }
+}
+
+.input-box-select {
+   -webkit-appearance: button;
+   -moz-appearance: button;
+   background-image: url('/scripts/components/HowMuchCanIEarn/select-icon.png');
+   background-size: 10px 10px;
+   background-position: 96% center;
+   background-repeat: no-repeat;
+   background-color: white;
+   border: 1px solid @nero;
+   color: @nero;
+   font-size: inherit;
+   overflow: hidden;
+   padding: 18px 10px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 100%;
+   border-radius: 0;
+   cursor: pointer;
 }

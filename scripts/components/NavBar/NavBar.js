@@ -7,10 +7,6 @@ import styles from './NavBar.less';
 
 class App extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount () {
         document.addEventListener('scroll', this.onScroll);
     }

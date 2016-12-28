@@ -8,13 +8,13 @@ import Footer from '../Footer/Footer';
 import ContactMenu from '../ContactMenu/ContactMenu'
 import NavBar from '../NavBar/NavBar';
 
-    const feedbacks = [
-        {
+const feedbacks = [
+    {
         userName: "Joe Montana",
-        feedbackText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quantum Aristoxeni ingenium consumptum videmus in musicis? Quo tandem modo? Ego vero volo in virtute vim esse quam maximam; Duo Reges: constructio interrete. Quod quidem nobis non saepe contingit. Iubet igitur nos Pythius Apollo noscere nosmet ipsos. Zenonis est, inquam, hoc Stoici. Nam his libris eum malo quam reliquo ornatu villae delectari."
-        }
-    ];
-
+        feedbackText: `I moved to London 3 years ago, but it was too expensive to bring my car with me. I've needed a car and have been wanting to find a smart solution. I had heard about car sharing before and thought there was nothing to loose with Carmi as it didn’t cost anything extra. They gave me a really good offer on the car I wanted that couldn’t be matched anywhere else. Delivery from the dealership was swift and I was put onto sharing platform automatically It’s smart and I can highly recommend Carmi`,
+        imageURL: './data/julian-london.jpg'
+    }
+];
 
 function Home () {
 

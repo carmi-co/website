@@ -10,16 +10,20 @@ function HowMuchCanIEarn () {
         <Element styleName="container" name="how-much">
             <div styleName="content" >
                 <h1 styleName="main-title">How much <span styleName="text-color-branded">can I earn</span> ?</h1>
-                <p styleName="text-content">Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi enim, venenatis in justo sed.</p>
+                <p styleName="text-content">Put in your postcode, the car type you are looking to acquire and when you are looking to share and we’ll give you idea of how much you can earn a month by sharing.</p>
                 <form action="http://www.carmy-api.com/query">
                     <div styleName="form-top">
                         <div styleName="form-top-column">
-                            <label htmlFor="postcode" styleName="label">Postcode</label>
-                            <input id="postcode" styleName="input-box" type="text" />
+                            <label htmlFor="postcode" styleName="form-label">Postcode</label>
+                            <input id="postcode" styleName="input-box" type="text" placeholder="enter your postcode" />
                         </div>
-                        <div styleName="form-top-column">            
-                            <label htmlFor="car-type" styleName="label">Car type</label>
-                            <input id="car-type" styleName="input-box" type="text" />
+                        <div styleName="form-top-column">        
+                            <label htmlFor="car-type" styleName="form-label">Car type</label>
+                            <select id="car-type" styleName="input-box-select" >
+                                <option value="small">Small sized car</option>
+                                <option value="medium">Medium sized car</option>
+                                <option value="big">Big sized car</option>
+                            </select>
                         </div>
                     </div>
                     <p styleName="form-title">WHEN ARE YOU PLANNING TO SHARE YOUR CAR?</p>                

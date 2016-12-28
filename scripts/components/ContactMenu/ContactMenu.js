@@ -26,7 +26,7 @@ function ContactMenu () {
                 <section styleName="subscribe-group">
                     <form styleName="subscribe-form">
                         <input styleName="subscribe-input" type="text" placeholder="Sign up to our newsletter"/>
-                        <input styleName="action" type="submit" />
+                        <input styleName="action" type="submit" value="subscribe" />
                     </form>
                 </section>
             </div>

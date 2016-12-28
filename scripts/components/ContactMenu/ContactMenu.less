@@ -6,7 +6,6 @@
 .container {
     font-family: avenir;
     font-size: 1rem;
-    font-weight: 600;
     color: white;
     
 }
@@ -20,9 +19,9 @@
 }
 
 .contact-group {
-    font-size: 0.9em;
     flex: 1 auto;
     min-width: 20%;
+
     & * {
         margin-bottom: 8px;
     }
@@ -38,7 +37,7 @@
 }
 
 .contact-info {
-    font-weight: 400;
+    font-family: avenirLight;
 }
 
 .menu {
@@ -48,11 +47,17 @@
 .menu-item {
     list-style: none;
     margin-bottom: 8px;
+
 }
 
 .menu-link {
     text-decoration: none;
     color: white;    
+
+    &:hover {
+        color: darken(white, 10%);
+        transition: color linear 0.2s;
+    }
 }
 
 .subscribe-form {
@@ -64,13 +69,16 @@
     height: 38px;
     flex: 1 auto;
     padding: 4px 8px;
+    font-size: 1em;
 }
 
 .action {
+    font-size: 0.8em;
     composes: button;
     border-radius: 0;
     flex: 1 auto;
     height: 46px;
     padding: 4px 8px;
     cursor: pointer;
+    text-transform: uppercase;
 }

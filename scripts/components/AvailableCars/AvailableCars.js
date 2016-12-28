@@ -3,27 +3,34 @@ import { Link } from 'react-router';
 import CSSModules from 'react-css-modules';
 import styles from './AvailableCars.less';
 import CarCard from '../CarCard/CarCard';
+import landRoverEvoque from './land-rover-evoque.jpg';
+import audiA3 from './audi-a3.jpg';
+import vauxhallCorsa from './vauxhall-corsa.jpg';
+
 
 function AvailableCars (props) {
     let { cars } = props;
     cars = [
         {           
-            name:'Fiat 500',
+            name:'Land Rover Evoque',
             cost: 1200, 
             earning:60,
             expected:100,
+            imageURL: landRoverEvoque
         },
         {           
-            name:'Ford Focus',
+            name:'Audi A3',
             cost: 12000, 
             earning:130,
             expected:500,
+            imageURL: audiA3
         },
         {           
-            name:'Ford Explorer',
+            name:'Vauxhall Corsa',
             cost: 23000, 
             earning:160,
             expected:200,
+            imageURL: vauxhallCorsa
         }
     ];
 

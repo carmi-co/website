@@ -1,20 +1,23 @@
 @import '../../styles/colors.less';
 @import '../../styles/styleguide.less';
+@import '../../styles/fonts.less';
 
 .container {
     font-size: 1rem;
-    color: @nero;
+    color: @mid-grey;
     width: 100%;
+    border: 1px @light-grey solid;
 }
 
 .main-title {
-    font-size: 2em;
+    font-size: 1.1em;
     flex: 1 auto;
     min-width: 100%;
     height: 30px;
     margin-bottom: 24px; 
-    text-transform: capitalize;
+    text-transform: uppercase;
     color: @turquoise;
+    letter-spacing: 2px;
 }
 
 .text-color-branded {
@@ -22,7 +25,7 @@
 }
 
 .text-content {
-    font-size: 1em;
+    color: @mid-grey;
 }
 
 .action {
@@ -30,23 +33,40 @@
     width: 100%;
     height: 42px;
     background-color: @turquoise;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.8em;
 
+    &:hover {
+        background-color: darken(@turquoise, 4%);
+        transition: background-color linear 0.1s;
+    }
 }
 
 .image {
     width: 100%;
+}
+
+.image-container {
+    width: 100%;
     height: 200px;
     background-color: @light-grey;
+    overflow: hidden;
 }
+
 .card-information {
     padding: 18px 40px;
+    font-size: 0.9em;
+    
 }
 
 .table-title {
-    width: 50%;
+    width: 70%;
+    font-weight: 300;
 }
 
 .table-value {
+    font-family: avenirBlack;
     width: 30%;
     text-align: right;
 }
