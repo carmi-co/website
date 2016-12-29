@@ -1,0 +1,46 @@
+@import '../../styles/colors.less';
+@import '../../styles/styleguide.less';
+@import '../../styles/fonts.less';
+
+.container {
+    font-family: avenir;
+    font-size: 1rem;
+}
+
+.action {
+    border: 1px solid @mid-grey;
+    border-radius: 2px;
+    width: 320px;
+    background-color: transparent;
+    cursor: pointer;
+    color: @nero;
+    padding: 8px 24px;
+
+    &:hover {
+        border: 1px solid @turquoise;
+        background-color: @turquoise;
+        color: white;
+        transition: background-color color 0.2s linear;
+    }
+}
+
+
+.action-back {
+    composes: action;
+    flex: 1 auto;
+}
+
+.action-next {
+    composes: action;
+    flex: 1 auto;
+    
+}
+.action-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 24px;
+
+    & * {
+        max-width: 160px;
+    }
+}

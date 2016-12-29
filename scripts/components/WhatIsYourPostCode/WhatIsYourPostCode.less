@@ -1,0 +1,37 @@
+@import '../../styles/colors.less';
+@import '../../styles/styleguide.less';
+@import '../../styles/fonts.less';
+
+.container {
+    font-family: avenir;
+    font-size: 1rem;
+    background-color: @light-grey;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.main-title {
+    font-size: 1em;
+}
+
+.text {
+    color: @mid-grey;
+    font-size: 1.2.em;
+}
+
+.action {
+    border: 1px solid @mid-grey;
+    border-radius: 2px;
+    width: 320px;
+    background-color: white;
+    cursor: pointer;
+    color: @nero;
+    padding: 8px 24px;
+
+    &:hover {
+        border: 1px solid @turquoise;
+        background-color: @turquoise;
+        color: white;
+        transition: background-color color 0.2s linear;
+    }
+}

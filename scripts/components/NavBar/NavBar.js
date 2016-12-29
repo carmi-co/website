@@ -8,7 +8,11 @@ import styles from './NavBar.less';
 class App extends Component {
 
     componentDidMount () {
-        document.addEventListener('scroll', this.onScroll);
+        const content = document.body.scrollHeight;
+        const screenHeight = window.screen.height;
+        if (content > screenHeight) {
+            document.addEventListener('scroll', this.onScroll);
+        }
     }
 
     onScroll = () => {
