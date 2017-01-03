@@ -10,8 +10,6 @@
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
 }
 
@@ -23,6 +21,8 @@
 
 .content {
     text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .action {
@@ -60,4 +60,12 @@
     & * {
         max-width: 160px;
     }
+}
+
+.column {
+    flex: 1 auto;
+    max-width: 50%;
+}
+.left-column, .right-column {
+    composes: column
 }

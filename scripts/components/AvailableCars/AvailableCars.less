@@ -6,9 +6,13 @@
 .container {
     font-family: avenir;
     font-size: 1rem;
-    padding: 80px 60px 100px;
+    padding: 20px;
     color: @nero;
     border-bottom: 1px #AAA solid;
+
+    @media only screen and (min-width:720px) and (-webkit-min-device-pixel-ratio: 1) {
+        padding: 80px 60px 100px;
+    }
 
 }
 
@@ -32,16 +36,24 @@
     margin-bottom: 112px;
 }
 .car-card {
-    max-width: 28%;
+    width: 100%;
     flex: 1 auto;
     list-style: none;
     padding: 10px;
     box-sizing: border-box;
+    
+    @media only screen and (min-width:1024px) and (-webkit-min-device-pixel-ratio: 1) {
+        max-width: 28%;
+    }
 }
 
 .cars-list {
     padding-left: 0;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
+
+    @media only screen and (min-width:1024px) and (-webkit-min-device-pixel-ratio: 1) {
+        flex-wrap: nowrap;
+    }
 }

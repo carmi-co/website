@@ -3,8 +3,6 @@ import { Link } from 'react-router';
 import CSSModules from 'react-css-modules';
 import styles from './NavBar.less';
 
-
-
 class App extends Component {
 
     componentDidMount () {

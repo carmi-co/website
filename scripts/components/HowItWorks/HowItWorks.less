@@ -4,10 +4,13 @@
 .container {
     font-family: avenir;
     font-size: 1rem;
-    padding: 80px 60px 100px;
+    padding: 20px;
     color: @nero;
     border-bottom: 1px #AAA solid;
 
+    @media only screen and (min-width:720px) and (-webkit-min-device-pixel-ratio: 1) {
+        padding: 80px 60px 100px;
+    }
 }
 
 .main-title {
@@ -23,7 +26,11 @@
     font-size: 1em;
     text-align: center;
     width: 100%;
-    margin-bottom: 112px;
+    margin-bottom: 24px;
+
+    @media only screen and (min-width:720px) and (-webkit-min-device-pixel-ratio: 1) {
+        margin-bottom: 112px;
+    }
 }
 
 .list-steps {
@@ -31,24 +38,46 @@
     width: 90%;
     justify-content: space-around;
     margin: auto;
+    flex-wrap: wrap;
+
+    @media only screen and (min-width:720px) and (-webkit-min-device-pixel-ratio: 1) {
+        flex-wrap: nowrap;
+    }
 }
 
 .column {
     flex: 1 auto;
-    max-width: 24%;
-    padding: 160px 8px 8px;
+    width: 100%;
+    padding: 8px;
     position: relative;
     text-align: center;
+    margin-bottom: 24px;
 
     &:before {
         content: "";
-        height: 120px;
-        width: 120px;
+        height: 0;
+        width: 0;
         top: 0;
         left: 50%;
         transform: translateX(-50%);
         position: absolute;
+
+        @media only screen and (min-width:720px) and (-webkit-min-device-pixel-ratio: 1) {
+            content: "";
+            height: 120px;
+            width: 120px;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
         }
+    }
+  
+    @media only screen and (min-width:720px) and (-webkit-min-device-pixel-ratio: 1) {
+        max-width: 24%;
+        padding: 160px 8px 8px;
+        margin-bottom: 0;
+    }
 }
 
 .column-car {
@@ -82,7 +111,6 @@
 
 .column-title {
     margin-bottom: 12px;
-    height: 100px;
     text-align: center;   
     text-transform: uppercase;
 }

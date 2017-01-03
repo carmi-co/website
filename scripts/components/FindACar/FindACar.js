@@ -3,13 +3,24 @@ import { Link } from 'react-router';
 import CSSModules from 'react-css-modules';
 import styles from './FindACar.less';
 import Wizard from '../Wizard/Wizard';
-import WhichDoYouPrefer from '../WhichDoYouPrefer/WhichDoYouPrefer';
-import WhatIsYourPostCode from '../WhatIsYourPostCode/WhatIsYourPostCode';
+import FindACarCostStep from '../FindACarCostStep/FindACarCostStep';
+import FindACarSizeStep from '../FindACarSizeStep/FindACarSizeStep';
+import FindACarVehicleTypeStep from '../FindACarVehicleTypeStep/FindACarVehicleTypeStep';
+import FindACarAgeStep from '../FindACarAgeStep/FindACarAgeStep';
+import FindACarPostcodeStep from '../FindACarPostcodeStep/FindACarPostcodeStep';
+import FindACarEmailStep from '../FindACarEmailStep/FindACarEmailStep';
+import FindACarUsernameStep from '../FindACarUsernameStep/FindACarUsernameStep';
+import FindACarMobileNumberStep from '../FindACarMobileNumberStep/FindACarMobileNumberStep';
+import FindACarFinalStep from '../FindACarFinalStep/FindACarFinalStep';
+import NavBar from '../NavBar/NavBar';
+import Footer from '../Footer/Footer';
+import ContactMenu from '../ContactMenu/ContactMenu';
 
 
 
-var fieldValues = {
+let fieldValues = {
   carPrefer: null,
+  sizePrefer: null,
   postCode: null
 }
 
@@ -30,7 +41,6 @@ class FindACar extends Component {
         //     fieldValues = Object.assign({}, fieldValues, fields);
         // }();
         fieldValues = Object.assign({}, fieldValues, fields);
-
     }
 
     nextStep = () => {
@@ -41,19 +51,55 @@ class FindACar extends Component {
     }
 
     previousStep = () => {
+        const { step } = this.state;
         this.setState({
-            step : this.state.step - 1
+            step : step - 1
         });
     }
 
     renderStep () {
         switch (this.state.step) {
             case 1:
-                return <WhichDoYouPrefer fieldValues={fieldValues}
+                return <FindACarCostStep fieldValues={fieldValues}
                             nextStep={this.nextStep}
                             saveValues={this.saveValues} />
             case 2:
-                return <WhatIsYourPostCode fieldValues={fieldValues}
+                return <FindACarSizeStep fieldValues={fieldValues}
+                           nextStep={this.nextStep}
+                           previousStep={this.previousStep}
+                           saveValues={this.saveValues} />
+            case 3:
+                return <FindACarVehicleTypeStep fieldValues={fieldValues}
+                           nextStep={this.nextStep}
+                           previousStep={this.previousStep}
+                           saveValues={this.saveValues} />
+            case 4:
+                return <FindACarAgeStep fieldValues={fieldValues}
+                           nextStep={this.nextStep}
+                           previousStep={this.previousStep}
+                           saveValues={this.saveValues} />
+            case 5:
+                return <FindACarPostcodeStep fieldValues={fieldValues}
+                           nextStep={this.nextStep}
+                           previousStep={this.previousStep}
+                           saveValues={this.saveValues} />
+            case 6:
+                return <FindACarEmailStep fieldValues={fieldValues}
+                           nextStep={this.nextStep}
+                           previousStep={this.previousStep}
+                           saveValues={this.saveValues} />
+            case 7:
+                return <FindACarUsernameStep fieldValues={fieldValues}
+                           nextStep={this.nextStep}
+                           previousStep={this.previousStep}
+                           saveValues={this.saveValues} />
+            case 8:
+                return <FindACarMobileNumberStep fieldValues={fieldValues}
+                           nextStep={this.nextStep}
+                           previousStep={this.previousStep}
+                           saveValues={this.saveValues} />
+            case 9:
+                return <FindACarFinalStep fieldValues={fieldValues}
                            nextStep={this.nextStep}
                            previousStep={this.previousStep}
                            saveValues={this.saveValues} />
@@ -63,7 +109,16 @@ class FindACar extends Component {
     render() {
         return (
             <div styleName="container">
-                { this.renderStep()}
+                <div styleName="header">
+                    <NavBar />
+                </div>
+                <div styleName="content">
+                    { this.renderStep()}
+                </div>
+                <div styleName="footer">
+                    <ContactMenu />
+                    <Footer />
+                </div>
             </div>
         );
     }

@@ -1,0 +1,117 @@
+@import '../../styles/colors.less';
+@import '../../styles/styleguide.less';
+@import '../../styles/fonts.less';
+
+.container {
+    font-family: avenir;
+    font-size: 1rem;
+    background-color: @light-grey;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.main-title {
+    font-size: 1em;
+    margin-bottom: 18px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.text {
+    color: @mid-grey;
+    font-size: 1.2.em;
+    margin-bottom: 18px;
+}
+
+.action {
+    border: 1px solid @mid-grey;
+    border-radius: 2px;
+    width: 320px;
+    background-color: white;
+    cursor: pointer;
+    color: @nero;
+    padding: 8px 24px;
+
+    &:hover {
+        border: 1px solid @turquoise;
+        background-color: @turquoise;
+        color: white;
+        transition: background-color color 0.2s linear;
+    }
+}
+
+.action-back {
+    composes: action;
+    flex: 1 auto;
+}
+
+.action-next {
+    composes: action;
+    flex: 1 auto;
+    
+}
+.action-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 24px;
+
+    & * {
+        max-width: 160px;
+    }
+}
+
+.input-label {
+    width: 180px;
+    padding: 8px 40px;
+    background-color: white;
+    cursor: pointer;
+    color: @nero;
+    margin: 0 auto 18px;
+    display: block;
+}
+
+.input {
+    border: 1px solid @nero;
+    height: 38px;
+    flex: 1 auto;
+    padding: 4px 8px;
+    font-size: 1em;
+    text-align: center;
+    margin: 0 auto 24px;
+    display: block;
+    width: 180px;
+    color: @mid-grey;
+}
+
+.input-range {
+    width: 200px;
+    margin-bottom: 24px;
+}
+
+.car-list-item {
+    list-style: none;
+    flex: 1 auto;
+    width: 100%;
+    display: inline-flex;
+}
+
+.car-list {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.car-list-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: @turquoise;
+    font-size: 1em;
+    margin-bottom: 8px;
+
+    &:hover {
+        color: darken(@turquoise, 10%);
+        transition: color linear .2s;
+    }
+}
+

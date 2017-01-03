@@ -7,18 +7,30 @@
     font-family: avenir;
     font-size: 1rem;
     color: @nero;
-    padding: 0px 60px 0px;
+    padding: 20px;
     padding-top: 80px;
     border-bottom: 1px #AAA solid;
-    background: url('/scripts/components/HowMuchCanIEarn/computer2.png') no-repeat bottom left;
     overflow: hidden;
+
+    @media only screen and (min-width:720px) and (-webkit-min-device-pixel-ratio: 1) {
+        padding: 80px 60px 100px;
+    }
+
+    @media only screen and (min-width:1200px) and (-webkit-min-device-pixel-ratio: 1) {
+        background: url('/scripts/components/HowMuchCanIEarn/computer.png') no-repeat bottom left;
+    }
 }
 
 .content {
-    max-width: 50%;
+    max-width: 100%;
     text-align: center;
     margin-bottom: 60px;
-    float: right;
+
+    @media only screen and (min-width:1200px) and (-webkit-min-device-pixel-ratio: 1) {
+        max-width: 50%;
+        text-align: center;
+        float: right;     
+    }
     
 }
 
@@ -74,24 +86,37 @@
 
 .form-top {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 40px;
+
+    @media only screen and (min-width:720px) and (-webkit-min-device-pixel-ratio: 1) {
+        flex-wrap: nowrap;
+    }
 }
 
 .form-bottom {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 40px;
+
+    @media only screen and (min-width:720px) and (-webkit-min-device-pixel-ratio: 1) {
+        flex-wrap: nowrap;
+    }
 }
 
 .form-top-column {
     flex: 1 auto;
-    max-width: 50%;
+    width: 100%;
     display: flex;
     padding: 20px;
     flex-wrap: wrap;
+
+    @media only screen and (min-width:720px) and (-webkit-min-device-pixel-ratio: 1) {
+        max-width: 50%;
+        padding: 20px;
+    }
 }
 
 .form-title {
@@ -107,8 +132,14 @@
     padding: 8px;
     border-radius: 1px;
     cursor: pointer;
-    margin: 0 40px;
+    margin: 0 10px;
     font-family: avenirBlack;
+    width: 100%;
+
+    @media only screen and (min-width:720px) and (-webkit-min-device-pixel-ratio: 1) {
+        width: auto;
+        margin: 0 40px;
+    }
 }
 
 .input-radio {

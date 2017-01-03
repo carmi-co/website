@@ -5,6 +5,7 @@
 .container {
     font-family: avenir;
     font-size: 1rem;
+    overflow: hidden;
 }
 
 .user-name {
@@ -14,11 +15,16 @@
 }
 
 .image-container {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: @light-grey;
-    overflow: hidden;
+    display: none;
+
+    @media only screen and (min-width:1200px) and (-webkit-min-device-pixel-ratio: 1) {
+        display: block;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: @light-grey;
+        overflow: hidden;
+    }
 }
 .image {
     width: 100%;
@@ -26,8 +32,12 @@
 
 .feedback-text-group {
     float: left;
-    width: 70%;
+    width: 100%;
     margin-right: 18px;
+    
+    @media only screen and (min-width:1200px) and (-webkit-min-device-pixel-ratio: 1) {
+        width: 70%;
+    }
 }
 
 .user-quote {
@@ -37,4 +47,8 @@
     font-size: 0.9em;
     color: @mid-grey;
     line-height: 22px;
+
+    @media only screen and (min-width:400px) and (-webkit-min-device-pixel-ratio: 1) {
+
+    }
 }

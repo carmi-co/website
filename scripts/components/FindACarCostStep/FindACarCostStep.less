@@ -6,23 +6,19 @@
     font-family: avenir;
     font-size: 1rem;
     background-color: @light-grey;
-    height: 100vh;
+    width: 400px;
+    margin: 0 auto;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+.main-title {
+    font-size: 1em;
+    margin-bottom: 18px;
 }
 
-.header {
-    position: relative;
-    height: 60px;
-    margin-bottom: 60px;
-}
-
-.content {
-    text-align: center;
+.text {
+    color: @mid-grey;
+    font-size: 1.2.em;
+    margin-bottom: 18px;
 }
 
 .action {
@@ -60,4 +56,25 @@
     & * {
         max-width: 160px;
     }
+}
+
+.action-option {
+    position: absolute;
+    left: -99999px;
+
+    &:checked + label {
+        background-color: @turquoise;
+        color: white;
+        transition: background-color .2s linear;
+    }
+}
+
+.action-option-label {
+    width: 180px;
+    padding: 8px 40px;
+    background-color: white;
+    cursor: pointer;
+    color: @nero;
+    margin: 0 auto 18px;
+    display: block;
 }

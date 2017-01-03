@@ -16,7 +16,7 @@ class Hero extends Component {
                 <p styleName="text">Get a car on a monthly subscription and earn by sharing it when you don't need it</p>
                 <div styleName="action-group">
                     <Link styleName="action-find" to={'/find'}>Find a car</Link>
-                    <Link styleName="action-known" to={'/known'}>I know what car</Link>
+                    <Link styleName="action-known" to={'/select'}>I know what car</Link>
                 </div>
                 <ScrollLink to="how-much" smooth={true} offset={-50} duration={500} styleName="action-how-much">How much can I earn?</ScrollLink>
                 <ScrollLink to="how-it-works" smooth={true} offset={-50} duration={500} styleName="action-how-it-work">How it works?</ScrollLink>

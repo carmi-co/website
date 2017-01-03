@@ -11,29 +11,56 @@
 }
 
 .content {
-    padding: 40px 120px;
+    padding: 40px 20px;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     background-color: @mid-grey;
+
+    @media only screen and (min-width:1200px) and (-webkit-min-device-pixel-ratio: 1) {
+        padding: 40px 120px;
+        flex-wrap: nowrap;
+    }
 }
 
 .contact-group {
     flex: 1 auto;
-    min-width: 20%;
+    width: 50%;
+    margin-bottom: 18px;
 
     & * {
         margin-bottom: 8px;
+    }
+
+    @media only screen and (min-width:1200px) and (-webkit-min-device-pixel-ratio: 1) {
+        min-width: 20%;
+        margin-bottom: 0;
     }
 }
 
 .menu-group {
     flex: 1 auto;
+    width: 50%;
+    margin-bottom: 18px;
+    
+    @media only screen and (min-width:1200px) and (-webkit-min-device-pixel-ratio: 1) {
+        min-width: 20%;
+        margin-bottom: 0;
+    }
 }
 
 .subscribe-group {
     flex: 1 auto;
     align-self: center;
+    max-width: 100%;
+    margin: 0 auto;
+    
+    @media only screen and (min-width:720px) and (-webkit-min-device-pixel-ratio: 1) {
+        max-width: 50%;
+    }
+    @media only screen and (min-width:1200px) and (-webkit-min-device-pixel-ratio: 1) {
+        width: 100%;
+    }
 }
 
 .contact-info {

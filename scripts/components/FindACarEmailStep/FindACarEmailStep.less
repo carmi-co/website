@@ -12,11 +12,8 @@
 
 .main-title {
     font-size: 1em;
-}
-
-.text {
-    color: @mid-grey;
-    font-size: 1.2.em;
+    margin-bottom: 18px;
+    display: block;
 }
 
 .action {
@@ -34,4 +31,37 @@
         color: white;
         transition: background-color color 0.2s linear;
     }
+}
+
+.action-back {
+    composes: action;
+    flex: 1 auto;
+}
+
+.action-next {
+    composes: action;
+    flex: 1 auto;
+    
+}
+.action-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 24px;
+
+    & * {
+        max-width: 160px;
+    }
+}
+
+.input {
+    border: 1px solid @nero;
+    height: 38px;
+    flex: 1 auto;
+    padding: 4px 8px;
+    font-size: 1em;
+    text-align: center;
+    margin: 0 auto 24px;
+    display: block;
+    width: 180px;
+    color: @mid-grey;
 }

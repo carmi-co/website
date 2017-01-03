@@ -3,6 +3,7 @@ import App from './components/App/App';
 import About from './components/About/About';
 import Home from './components/Home/Home';
 import FindACar from './components/FindACar/FindACar';
+import SelectACar from './components/SelectACar/SelectACar';
 
 import React from 'react';
 
@@ -12,8 +13,8 @@ function Routes () {
             <Route path="/" component={App} >
                 <IndexRoute to="/" component={Home} />        
             </Route>
-            <Route path="/find" component={FindACar} >
-                <Route />
+            <Route path="/find" component={FindACar} />
+            <Route path="/select" component={SelectACar}>
             </Route>
         </Router>
     );
