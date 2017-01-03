@@ -30,7 +30,7 @@ class FindACarUsernameStep extends Component {
         return (
             <div styleName="container">
                 <label styleName="main-title">What is your name?</label>
-                <input styleName="input" ref={(c) => { this.username = c; }} type="email" placeholder="Enter your name"/>
+                <input styleName="input" ref={(c) => { this.username = c; }} type="text" placeholder="Enter your name"/>
                 <div styleName="action-group">
                     <button styleName="action-back" onClick={this.handlePreviousStep}>Back</button>
                     <button styleName="action-next" onClick={this.saveAndContinue}>Next</button>

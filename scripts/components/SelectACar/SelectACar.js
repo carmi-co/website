@@ -10,10 +10,14 @@ import ContactMenu from '../ContactMenu/ContactMenu';
 import cars from '../SelectACarBrand/carsDB';
 import SelectCarStep from '../SelectCarStep/SelectCarStep';
 import SelectACarPostalcodeStep from '../SelectACarPostalcodeStep/SelectACarPostalcodeStep';
+import SelectACarNameStep from '../SelectACarNameStep/SelectACarNameStep';
+import SelectACarFinalStep from '../SelectACarFinalStep/SelectACarFinalStep';
 
 let fieldValues = {
   brand: null,
   model: null,
+  username: null,
+  email: null
 }
 
 function percentage(currentStep = 1, steps = 1) {
@@ -60,36 +64,14 @@ class FindACar extends Component {
                            nextStep={this.nextStep}
                            previousStep={this.previousStep}
                            saveValues={this.saveValues} />
-            // case 3:
-            //     return <FindACarVehicleTypeStep fieldValues={fieldValues}
-            //                nextStep={this.nextStep}
-            //                previousStep={this.previousStep}
-            //                saveValues={this.saveValues} />
-            // case 4:
-            //     return <FindACarAgeStep fieldValues={fieldValues}
-            //                nextStep={this.nextStep}
-            //                previousStep={this.previousStep}
-            //                saveValues={this.saveValues} />
-            // case 5:
-            //     return <FindACarPostcodeStep fieldValues={fieldValues}
-            //                nextStep={this.nextStep}
-            //                previousStep={this.previousStep}
-            //                saveValues={this.saveValues} />
-            // case 6:
-            //     return <FindACarEmailStep fieldValues={fieldValues}
-            //                nextStep={this.nextStep}
-            //                previousStep={this.previousStep}
-            //                saveValues={this.saveValues} />
-            // case 7:
-            //     return <FindACarUsernameStep fieldValues={fieldValues}
-            //                nextStep={this.nextStep}
-            //                previousStep={this.previousStep}
-            //                saveValues={this.saveValues} />
-            // case 8:
-            //     return <FindACarMobileNumberStep fieldValues={fieldValues}
-            //                nextStep={this.nextStep}
-            //                previousStep={this.previousStep}
-            //                saveValues={this.saveValues} />
+            case 3:
+                return <SelectACarNameStep fieldValues={fieldValues}
+                           nextStep={this.nextStep}
+                           previousStep={this.previousStep}
+                           saveValues={this.saveValues} />
+            case 4:
+                return <SelectACarFinalStep fieldValues={fieldValues}/>
+
             default:
                 return null;
         }
