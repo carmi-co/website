@@ -3,6 +3,11 @@ import { Link } from 'react-router';
 import CSSModules from 'react-css-modules';
 import styles from './Hero.less';
 import { Link as ScrollLink } from 'react-scroll';
+import HeroImg from './hero_background.png';
+
+const backgroundImage = {
+  backgroundImage: `url(${HeroImg})`
+};
 
 class Hero extends Component {
     constructor (props) {
@@ -11,7 +16,7 @@ class Hero extends Component {
 
     render() {
         return (
-            <div styleName="container">
+    <div styleName="container" style={backgroundImage}>
                 <p styleName="main-text">Flexibility of a car when you need it and income when you don't</p>
                 <p styleName="text">Get a car on a monthly subscription and earn by sharing it when you don't need it</p>
                 <div styleName="action-group">
