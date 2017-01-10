@@ -9,7 +9,7 @@ import React from 'react';
 
 function Routes () {
     return (
-        <Router history={browserHistory} onEnter={checkForRedirect}>
+        <Router history={browserHistory}>
             <Route path="/" component={App} >
                 <IndexRoute to="/" component={Home} />        
             </Route>
