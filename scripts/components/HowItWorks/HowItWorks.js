@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import CSSModules from 'react-css-modules';
 import styles from './HowItWorks.less';
-import car from "./icon-car.png";
-import hands from "./icon-hands.png";
-import share from "./icon-share.png";
 import { Element } from 'react-scroll';
 
 function HowItWorks () {
