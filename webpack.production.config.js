@@ -15,12 +15,8 @@ const config = {
      module: {
         loaders: [
             {
-                test: /\.(woff|woff2|eot|ttf)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                test: /\.(png|jpg|woff|woff2|eot|ttf)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 loader: 'file-loader'
-            },
-            {
-                test: /\.(png|jpg|)$/,
-                loader: "url-loader?limit=10000&name=img/img-[hash:6].[ext]"
             },
             {
                 test: /\.less$/,
