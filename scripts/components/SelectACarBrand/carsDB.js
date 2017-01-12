@@ -37,12 +37,29 @@ const cars = [
         brand: "Audi",
         models: [
                     {
-                        model: "4C",
+                        model: "A1",
                         imageURL: ""
 
                     },
                     {
-                        model: "Giulietta",
+                        model: "A1 Sportback",
+                        imageURL: ""
+
+                    },
+                    {
+                        model: "A3",
+                        imageURL: ""
+                    },
+                    {
+                        model: "A3 Cabriolet",
+                        imageURL: ""
+                    },
+                    {
+                        model: "A3 e-tron",
+                        imageURL: ""
+                    },
+                    {
+                        model: "A3 Saloon",
                         imageURL: ""
                     }
                 ]
@@ -51,12 +68,26 @@ const cars = [
         brand: "BMW",
         models: [
                     {
-                        model: "4C",
+                        model: "1 Series",
                         imageURL: ""
 
                     },
                     {
-                        model: "Giulietta",
+                        model: "2 Series",
+                        imageURL: ""
+                    }
+                ]
+    },
+    {
+        brand: "Citroen",
+        models: [
+                    {
+                        model: "Berlingo Multispace",
+                        imageURL: ""
+
+                    },
+                    {
+                        model: "C1",
                         imageURL: ""
                     }
                 ]
@@ -65,12 +96,12 @@ const cars = [
         brand: "Fiat",
         models: [
                     {
-                        model: "4C",
+                        model: "124 Spider",
                         imageURL: ""
 
                     },
                     {
-                        model: "Giulietta",
+                        model: "500",
                         imageURL: ""
                     }
                 ]
@@ -79,12 +110,12 @@ const cars = [
         brand: "Ford",
         models: [
                     {
-                        model: "4C",
+                        model: "B-Max",
                         imageURL: ""
 
                     },
                     {
-                        model: "Giulietta",
+                        model: "C-Max",
                         imageURL: ""
                     }
                 ]
@@ -93,12 +124,12 @@ const cars = [
         brand: "Honda",
         models: [
                     {
-                        model: "4C",
+                        model: "Civic",
                         imageURL: ""
 
                     },
                     {
-                        model: "Giulietta",
+                        model: "Civic Tourer",
                         imageURL: ""
                     }
                 ]
@@ -107,12 +138,12 @@ const cars = [
         brand: "Hyundai",
         models: [
                     {
-                        model: "4C",
+                        model: "Genesis",
                         imageURL: ""
 
                     },
                     {
-                        model: "Giulietta",
+                        model: "i10",
                         imageURL: ""
                     }
                 ]
@@ -121,12 +152,12 @@ const cars = [
         brand: "Jaguar",
         models: [
                     {
-                        model: "4C",
+                        model: "F-Pace",
                         imageURL: ""
 
                     },
                     {
-                        model: "Giulietta",
+                        model: "F-Type convertible",
                         imageURL: ""
                     }
                 ]
@@ -135,12 +166,12 @@ const cars = [
         brand: "Jeep",
         models: [
                     {
-                        model: "4C",
+                        model: "Cherokee",
                         imageURL: ""
 
                     },
                     {
-                        model: "Giulietta",
+                        model: "Grand Cherokee",
                         imageURL: ""
                     }
                 ]
@@ -149,12 +180,12 @@ const cars = [
         brand: "Kia",
         models: [
                     {
-                        model: "4C",
+                        model: "Carens",
                         imageURL: ""
 
                     },
                     {
-                        model: "Giulietta",
+                        model: "Ceed",
                         imageURL: ""
                     }
                 ]
@@ -163,12 +194,12 @@ const cars = [
         brand: "Land Rover",
         models: [
                     {
-                        model: "4C",
+                        model: "Discovery",
                         imageURL: ""
 
                     },
                     {
-                        model: "Giulietta",
+                        model: "Discovery Sport",
                         imageURL: ""
                     }
                 ]
@@ -177,12 +208,12 @@ const cars = [
         brand: "Lexus",
         models: [
                     {
-                        model: "4C",
+                        model: "CT",
                         imageURL: ""
 
                     },
                     {
-                        model: "Giulietta",
+                        model: "GS",
                         imageURL: ""
                     }
                 ]
@@ -191,12 +222,12 @@ const cars = [
         brand: "Mazda",
         models: [
                     {
-                        model: "4C",
+                        model: "2",
                         imageURL: ""
 
                     },
                     {
-                        model: "Giulietta",
+                        model: "3",
                         imageURL: ""
                     }
                 ]
@@ -205,12 +236,12 @@ const cars = [
         brand: "Mercedes-Benz",
         models: [
                     {
-                        model: "4C",
+                        model: "A45 AMG",
                         imageURL: ""
 
                     },
                     {
-                        model: "Giulietta",
+                        model: "A-Class",
                         imageURL: ""
                     }
                 ]
@@ -219,12 +250,12 @@ const cars = [
         brand: "Mini",
         models: [
                     {
-                        model: "4C",
+                        model: "5-door",
                         imageURL: ""
 
                     },
                     {
-                        model: "Giulietta",
+                        model: "Clubman",
                         imageURL: ""
                     }
                 ]
@@ -247,12 +278,68 @@ const cars = [
         brand: "Nissan",
         models: [
                     {
-                        model: "4C",
+                        model: "ASX",
                         imageURL: ""
 
                     },
                     {
-                        model: "Giulietta",
+                        model: "Mirage",
+                        imageURL: ""
+                    }
+                ]
+    },
+    {
+        brand: "Peugeot",
+        models: [
+                    {
+                        model: "108",
+                        imageURL: ""
+
+                    },
+                    {
+                        model: "108 Top Convertible",
+                        imageURL: ""
+                    }
+                ]
+    },
+    {
+        brand: "Renault",
+        models: [
+                    {
+                        model: "Captur",
+                        imageURL: ""
+
+                    },
+                    {
+                        model: "Clio",
+                        imageURL: ""
+                    }
+                ]
+    },
+    {
+        brand: "Seat Ibiza",
+        models: [
+                    {
+                        model: "Alhambra",
+                        imageURL: ""
+
+                    },
+                    {
+                        model: "Ateca",
+                        imageURL: ""
+                    }
+                ]
+    },
+    {
+        brand: "Skoda",
+        models: [
+                    {
+                        model: "Citigo",
+                        imageURL: ""
+
+                    },
+                    {
+                        model: "Fabia",
                         imageURL: ""
                     }
                 ]
@@ -261,12 +348,12 @@ const cars = [
         brand: "Smart",
         models: [
                     {
-                        model: "4C",
+                        model: "ForFour",
                         imageURL: ""
 
                     },
                     {
-                        model: "Giulietta",
+                        model: "ForFour Night Sky",
                         imageURL: ""
                     }
                 ]
@@ -275,12 +362,12 @@ const cars = [
         brand: "Toyota",
         models: [
                     {
-                        model: "4C",
+                        model: "Auris",
                         imageURL: ""
 
                     },
                     {
-                        model: "Giulietta",
+                        model: "Auris Touring Sport",
                         imageURL: ""
                     }
                 ]
@@ -289,12 +376,12 @@ const cars = [
         brand: "Volkswagen",
         models: [
                     {
-                        model: "4C",
+                        model: "Beetle",
                         imageURL: ""
 
                     },
                     {
-                        model: "Giulietta",
+                        model: "Beetle Cabriolet",
                         imageURL: ""
                     }
                 ]
@@ -303,12 +390,12 @@ const cars = [
         brand: "Volvo",
         models: [
                     {
-                        model: "4C",
+                        model: "S60",
                         imageURL: ""
 
                     },
                     {
-                        model: "Giulietta",
+                        model: "S90",
                         imageURL: ""
                     }
                 ]

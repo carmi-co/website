@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import CSSModules from 'react-css-modules';
 import styles from './SelectACarNameStep.less';
+import { emailValidate } from '../../utilities/emailValidate';
 
 class SelectACarNameStep extends Component {
 
     saveAndContinue = (e) => {
+        e.preventDefault();        
         const { saveValues, nextStep, fieldValues } = this.props;
-        e.preventDefault();
+        if (!this.email.value || !emailValidate(this.email.value) || !this.username.value) {
+            return null;
+        }
         let data = {
             postcode : this.username.value,
             postcode : this.email.value

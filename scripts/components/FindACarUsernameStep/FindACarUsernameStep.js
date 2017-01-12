@@ -5,19 +5,17 @@ import styles from './FindACarUsernameStep.less';
 
 class FindACarUsernameStep extends Component {
 
-    setSelected(data) {
-        return this.setState({selected: data});
-    }
-
     saveAndContinue = (e) => {
         const { saveValues, nextStep, fieldValues } = this.props;
- 
+        if (!this.username.value) {
+            return null;
+        }
         e.preventDefault();
         let data = {
-            email : this.username.value
+            username : this.username.value
         }
         saveValues(data);
-        nextStep();
+        return nextStep();
     }
 
     handlePreviousStep = (e) => {

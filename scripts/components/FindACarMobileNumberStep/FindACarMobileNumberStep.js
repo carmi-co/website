@@ -2,22 +2,24 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import CSSModules from 'react-css-modules';
 import styles from './FindACarMobileNumberStep.less';
+import phoneValidate from 'phone';
 
 class FindACarMobileNumberStep extends Component {
-
-    setSelected(data) {
-        return this.setState({ selected: data });
+    validatePhone(userNumber) {
+        return phoneValidate(userNumber, 'GBR').length;
     }
 
     saveAndContinue = (e) => {
+        e.preventDefault();        
         const { saveValues, nextStep, fieldValues } = this.props;
- 
-        e.preventDefault();
+        if (!this.mobileNumber.value || !this.validatePhone(this.mobileNumber.value)) {
+            return null;
+        }
         let data = {
-            email : this.mobileNumber.value
+            mobileNumber : this.mobileNumber.value
         }
         saveValues(data);
-        nextStep();
+        return nextStep();
     }
     
     handlePreviousStep = (e) => {
@@ -30,7 +32,7 @@ class FindACarMobileNumberStep extends Component {
         return (
             <div styleName="container">
                 <label styleName="main-title">What is your mobile number?</label>
-                <input styleName="input" ref={(c) => { this.mobileNumber = c; }} type="email" placeholder="Enter your email"/>
+                <input styleName="input" ref={(c) => { this.mobileNumber = c; }} type="text" placeholder="Enter your mobile number"/>
                 <div styleName="action-group">
                     <button styleName="action-back" onClick={this.handlePreviousStep}>Back</button>
                     <button styleName="action-next" onClick={this.saveAndContinue}>Next</button>

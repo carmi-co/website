@@ -16,13 +16,22 @@
 .header {
     position: relative;
     height: 60px;
-    margin-bottom: 60px;
+
+    @media only screen and (min-width:720px) and (-webkit-min-device-pixel-ratio: 1) {
+        margin-bottom: 60px;
+    }
 }
 
 .content {
     text-align: center;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    
+    @media only screen and (min-width:720px) and (-webkit-min-device-pixel-ratio: 1) {
+       flex-wrap: nowrap;
+       margin-bottom: 24px;
+    }
 }
 
 .action {
@@ -64,8 +73,14 @@
 
 .column {
     flex: 1 auto;
-    max-width: 50%;
 }
+
 .left-column, .right-column {
-    composes: column
+    composes: column;
+    width: 100%;
+    flex: 1 auto;
+
+    @media only screen and (min-width:720px) and (-webkit-min-device-pixel-ratio: 1) {
+        width: 50%;
+    }
 }

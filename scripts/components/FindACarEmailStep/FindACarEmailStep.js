@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import CSSModules from 'react-css-modules';
 import styles from './FindACarEmailStep.less';
+import { emailValidate } from '../../utilities/emailValidate';
 
 class FindACarPostcodeStep extends Component {
 
@@ -11,13 +12,15 @@ class FindACarPostcodeStep extends Component {
 
     saveAndContinue = (e) => {
         const { saveValues, nextStep, fieldValues } = this.props;
- 
         e.preventDefault();
+        if (!this.email.value || !emailValidate(this.email.value)) {
+            return null;
+        }
         let data = {
             email : this.email.value
         }
         saveValues(data);
-        nextStep();
+        return nextStep();
     }
 
     handlePreviousStep = (e) => {

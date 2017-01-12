@@ -21,11 +21,14 @@ class FindACarSizeStep extends Component {
         const { saveValues, nextStep } = this.props;
         const { selected } = this.state;
         e.preventDefault();
+        if (!this.state.selected) {
+            return null;
+        }
         let data = {
             sizePrefer : this.state.selected
         }
         saveValues(data);
-        nextStep();
+        return nextStep();
     }
 
     handlePreviousStep = (e) => {

@@ -13,11 +13,15 @@ class App extends Component {
         }
     }
 
+    componentWillUnmount() {
+        document.removeEventListener('scroll', this.onScroll);
+    }
+
     onScroll = () => {
         window.scrollY >= 0 + 1 ? this.navbar.classList.add(styles.fixed) :
         this.navbar.classList.remove(styles.fixed);
     }
-
+  
     render() {
         return (
             <div styleName="container" ref={(c) => { this.navbar = c; }} >

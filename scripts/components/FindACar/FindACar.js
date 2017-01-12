@@ -37,9 +37,6 @@ class FindACar extends Component {
     }
 
     saveValues(fields) {
-        // return function() {
-        //     fieldValues = Object.assign({}, fieldValues, fields);
-        // }();
         fieldValues = Object.assign({}, fieldValues, fields);
     }
 

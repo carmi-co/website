@@ -10,9 +10,13 @@
 }
 
 .footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
+    
+    @media only screen and (min-width:1200px) and (-webkit-min-device-pixel-ratio: 1) {
+        position: absolute;
+    }
 }
 
 .header {

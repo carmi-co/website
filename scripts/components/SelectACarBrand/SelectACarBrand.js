@@ -12,10 +12,10 @@ class SelectACarBrandStep extends Component {
     }
 
     handleClickBrand(brand) {
-        const { saveValues, nextStep} = this.props;
+        const { saveValues, nextStep, startStep} = this.props;
         this.setState({ brandSelected: brand });
         saveValues({ brand: brand });
-        nextStep();
+        startStep();
     }
 
     handleInput = (e) => {

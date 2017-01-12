@@ -6,9 +6,16 @@
     font-family: avenir;
     font-size: 1rem;
     background-color: @light-grey;
-    width: 400px;
+    width: 100%;
     margin: 0 auto;
-    border-right: 1px solid @mid-grey;
+    border-bottom: 1px solid @mid-grey;
+    padding: 12px;
+    
+    @media only screen and (min-width:720px) and (-webkit-min-device-pixel-ratio: 1) {
+        border-right: 1px solid #55595b;
+        border-bottom: 0;
+        padding: 12px;
+    }
 }
 
 .main-title {
@@ -94,6 +101,7 @@
     flex: 1 auto;
     width: 33%;
     display: inline-flex;
+    max-width: 33%;
 }
 
 .brand-list {
@@ -109,6 +117,8 @@
     color: @turquoise;
     font-size: 1em;
     margin-bottom: 8px;
+    text-align: left;
+    align-self: flex-start;
 
     &:hover {
         color: darken(@turquoise, 10%);

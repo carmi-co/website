@@ -33,10 +33,14 @@ class FindACar extends Component {
     }
 
     saveValues(fields) {
-        // return function() {
-        //     fieldValues = Object.assign({}, fieldValues, fields);
-        // }();
         fieldValues = Object.assign({}, fieldValues, fields);
+    }
+
+    startStep = () => {
+        const { step } = this.state;
+        this.setState({
+            step : 1
+        });
     }
 
     nextStep = () => {
@@ -87,6 +91,7 @@ class FindACar extends Component {
                     <div styleName="left-column">
                         <SelectACarBrand cars={cars}
                         nextStep={this.nextStep}
+                        startStep={this.startStep}
                         saveValues={this.saveValues}
                         />
                     </div>

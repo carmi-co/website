@@ -6,8 +6,13 @@
     font-family: avenir;
     font-size: 1rem;
     background-color: @light-grey;
-    width: 400px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 24px auto 0;
+    
+    @media only screen and (min-width:720px) and (-webkit-min-device-pixel-ratio: 1) {
+        margin-top: 0;
+        width: 400px;
+    }
 }
 
 .main-title {

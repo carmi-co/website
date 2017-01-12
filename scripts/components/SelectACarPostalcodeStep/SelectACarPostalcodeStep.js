@@ -2,17 +2,21 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import CSSModules from 'react-css-modules';
 import styles from './SelectACarPostalcodeStep.less';
+import { validatePostcode } from '../../utilities/postcodeValidate';
 
 class SelectACarPostalcodeStep extends Component {
 
     saveAndContinue = (e) => {
         const { saveValues, nextStep, fieldValues } = this.props;
         e.preventDefault();
+         if (!this.postcode.value || !validatePostcode(this.postcode.value)) {
+            return null;
+        }
         let data = {
             postcode : this.postcode.value
         }
         saveValues(data);
-        nextStep();
+        return nextStep();
     }
 
     handlePreviousStep = (e) => {
