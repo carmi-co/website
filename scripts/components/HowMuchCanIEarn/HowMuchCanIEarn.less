@@ -2,14 +2,13 @@
 @import '../../styles/styleguide.less';
 @import '../../styles/fonts.less';
 
-
 .container {
     font-family: avenir;
     font-size: 1rem;
     color: @nero;
     padding: 20px;
     padding-top: 80px;
-    border-bottom: 1px #AAA solid;
+    border-bottom: 1px @light-grey solid;
     overflow: hidden;
 
     @media only screen and (min-width:720px) and (-webkit-min-device-pixel-ratio: 1) {
@@ -77,7 +76,7 @@
 .action-form {
     composes: button;
     flex: 1 auto;
-    background-color: #0be383;
+    background-color: @emerald;
     border-radius: 1px;
     border-style: none;
     font-size: .8em;
@@ -172,4 +171,46 @@
    width: 100%;
    border-radius: 0;
    cursor: pointer;
+}
+
+.popup {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border: 1px @light-grey solid;
+
+    @media only screen and (min-width:720px) and (-webkit-min-device-pixel-ratio: 1) {
+        width: 100%;
+        max-width: 600px;
+        position: absolute;
+        margin: 0 auto;    
+        transform: translateX(-50%);
+        left: 50%;
+        z-index: 1000;
+    }
+}
+
+.popup-action {
+    border: none;
+    height: 20px;
+    width: 20px;
+    text-indent: -9999px;
+    color: transparent;
+    cursor: pointer;
+    background-color: transparent;
+
+    &:focus {
+        outline:0;
+    }
+
+    &:before {
+        content: "";
+        background: url('../../../public/img/close-icon.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 20px;
+        width: 20px;
+        display: block;
+        background-size: 16px;
+    }
 }
