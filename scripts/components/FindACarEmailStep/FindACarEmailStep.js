@@ -11,15 +11,13 @@ class FindACarPostcodeStep extends Component {
     }
 
     saveAndContinue = (e) => {
-        const { saveValues, nextStep, fieldValues } = this.props;
+        const { nextStep, fieldValues, storeUserEmail } = this.props;
+        const { value } = this.email;
         e.preventDefault();
-        if (!this.email.value || !emailValidate(this.email.value)) {
+        if (!value || !emailValidate(value)) {
             return null;
         }
-        let data = {
-            email : this.email.value
-        }
-        saveValues(data);
+        storeUserEmail(value);
         return nextStep();
     }
 

@@ -18,16 +18,13 @@ class FindACarSizeStep extends Component {
     }
 
     saveAndContinue = (e) => {
-        const { saveValues, nextStep } = this.props;
+        const { nextStep, storeCarSize } = this.props;
         const { selected } = this.state;
         e.preventDefault();
-        if (!this.state.selected) {
+        if (!selected) {
             return null;
         }
-        let data = {
-            sizePrefer : this.state.selected
-        }
-        saveValues(data);
+        storeCarSize(selected)
         return nextStep();
     }
 
@@ -41,11 +38,10 @@ class FindACarSizeStep extends Component {
         return (
             <div styleName="container">
                 <h1 styleName="main-title">Which do you prefer?</h1>
-                <input onClick={() => this.setSelected('Least Expensive')}id="option-one" styleName="action-option" name="which-do-you-prefer" type="radio" value="Small"/>
+                <input onClick={() => this.setSelected('Small')} id="option-one" styleName="action-option" name="which-do-you-prefer" type="radio" value="Small"/>
                 <label htmlFor="option-one" styleName="action-option-label">Something small</label>
-                <p styleName="text">or</p>
-                                    
-                <input onClick={() => this.setSelected('Premium')} id="option-two" styleName="action-option" name="which-do-you-prefer" type="radio" value="Big"/>
+                <p styleName="text">or</p>            
+                <input onClick={() => this.setSelected('Big')} id="option-two" styleName="action-option" name="which-do-you-prefer" type="radio" value="Big"/>
                 <label styleName="action-option-label" htmlFor="option-two">Something big</label>   
                 <div styleName="action-group">
                     <button styleName="action-back" onClick={this.handlePreviousStep}>Back</button>

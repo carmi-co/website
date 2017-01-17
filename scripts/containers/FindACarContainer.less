@@ -1,18 +1,35 @@
-@import '../../styles/colors.less';
-@import '../../styles/styleguide.less';
-@import '../../styles/fonts.less';
+@import '../styles/colors.less';
+@import '../styles/styleguide.less';
+@import '../styles/fonts.less';
 
 .container {
     font-family: avenir;
     font-size: 1rem;
     background-color: @light-grey;
-    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.main-title {
-    font-size: 1em;
-    margin-bottom: 18px;
-    display: block;
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    
+    @media only screen and (min-width:1200px) and (-webkit-min-device-pixel-ratio: 1) {
+        position: absolute;
+    }
+}
+
+.header {
+    position: relative;
+    height: 60px;
+    margin-bottom: 60px;
+}
+
+.content {
+    text-align: center;
+    flex: 1 auto;
 }
 
 .action {
@@ -46,22 +63,8 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 24px;
-    margin-top: 150px;
 
     & * {
         max-width: 160px;
     }
-}
-
-.input {
-    border: 1px solid @nero;
-    height: 38px;
-    flex: 1 auto;
-    padding: 4px 8px;
-    font-size: 1em;
-    text-align: center;
-    margin: 0 auto 24px;
-    display: block;
-    width: 180px;
-    color: @mid-grey;
 }

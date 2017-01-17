@@ -11,14 +11,11 @@ class FindACarMobileNumberStep extends Component {
 
     saveAndContinue = (e) => {
         e.preventDefault();        
-        const { saveValues, nextStep, fieldValues } = this.props;
+        const { nextStep, fieldValues, storeUserMobile } = this.props;
         if (!this.mobileNumber.value || !this.validatePhone(this.mobileNumber.value)) {
             return null;
         }
-        let data = {
-            mobileNumber : this.mobileNumber.value
-        }
-        saveValues(data);
+        storeUserMobile(this.mobileNumber.value);
         return nextStep();
     }
     

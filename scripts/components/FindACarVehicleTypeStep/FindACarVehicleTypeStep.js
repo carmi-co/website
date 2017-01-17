@@ -18,16 +18,13 @@ class FindACarVehicleTypeStep extends Component {
     }
 
     saveAndContinue = (e) => {
-        const { saveValues, nextStep } = this.props;
+        const { nextStep, storeCarType } = this.props;
         const { selected } = this.state;
         e.preventDefault();
-        if (!this.state.selected) {
+        if (!selected) {
             return null;
         }
-        let data = {
-            typePrefer : this.state.selected
-        }
-        saveValues(data);
+        storeCarType(selected);
         return nextStep();
     }
 

@@ -14,13 +14,10 @@ class FindACarAgeStep extends Component {
     }
 
     saveAndContinue = (e) => {
-        const { saveValues, nextStep } = this.props;
+        const { nextStep, storeUserAge } = this.props;
         const { selected } = this.state;
         e.preventDefault();
-        let data = {
-            typePrefer : this.age.value
-        }
-        saveValues(data);
+        storeUserAge(this.age.value);
         nextStep();
     }
 

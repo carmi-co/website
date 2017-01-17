@@ -1,6 +1,6 @@
 {
   "presets": ["es2015", "latest", "react", "stage-0"],
-  "plugins": ["transform-async-to-generator"],
+  "plugins": ["transform-async-to-generator", "transform-decorators-legacy"],
   "env": {
     "development": {
         "presets": ["react-hmre"]

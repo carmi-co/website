@@ -7,17 +7,12 @@ import { validatePostcode } from '../../utilities/postcodeValidate';
 class FindACarPostcodeStep extends Component {
 
     saveAndContinue = (e) => {
-        const { saveValues, nextStep, fieldValues } = this.props;
+        const { nextStep, fieldValues, storeUserPostcode } = this.props;
         e.preventDefault();
         if (!this.postcode.value || !validatePostcode(this.postcode.value)) {
             return null;
-        }
-        
-        let data = {
-            postcode : this.postcode.value
-        }
-        
-        saveValues(data);
+        } 
+        storeUserPostcode(this.postcode.value);
         nextStep();
     }
 

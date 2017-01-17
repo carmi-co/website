@@ -11,6 +11,7 @@ class HowMuchCanIEarn extends Component {
     constructor(props) {
         super(props);
         this.state = { showPopup: false };
+        this._handleSize = this.handleSize.bind(this);
     }
     
     handleSize = (e) => {
@@ -27,11 +28,10 @@ class HowMuchCanIEarn extends Component {
 
     renderQuote () {
         if (this.state.showPopup && this.userPostcode.value && this.userPostcode.value) {
-            const value = this.handleSize.bind(this);
             return (
                 <div styleName="popup">
                     <button styleName="popup-action" onClick={this.handleClose}>Close</button>
-                    <p>With the current demand in your area and the type of car you have chosen, our estimate is that you will be able to earn the following per month: £{value()} per month (equals 3 days a month)</p>
+                    <p>With the current demand in your area and the type of car you have chosen, our estimate is that you will be able to earn the following per month: £{this._handleSize()} per month (equals 3 days a month)</p>
                     <p>In order to get to this estimate we have collected data from the biggest P2P providers in the country to understand the demand in your area and average prices.</p>
                     <p>Please note that this is an estimate and that you will not be guaranteed to be able to rent your car out as much as we have listed above. However, it might also be that you will be able to rent your car our more than noted above. Also note that time of day, number of days available and weekdays/weekends plays a role in how much you can earn a month.</p>
                 </div>

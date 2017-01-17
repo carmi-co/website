@@ -5,7 +5,8 @@ import HowMuchCanIEarn from '../HowMuchCanIEarn/HowMuchCanIEarn';
 import AvailableCars from '../AvailableCars/AvailableCars';
 import Feedback from '../Feedback/Feedback';
 import Footer from '../Footer/Footer';
-import ContactMenu from '../ContactMenu/ContactMenu'
+import ContactMenu from '../ContactMenu/ContactMenu';
+import Counter from '../Counter/Counter';
 
 const feedbacks = [
     {
