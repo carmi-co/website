@@ -1,12 +1,25 @@
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+var isDevelopment = process.argv.indexOf('--development') !== -1;
 
 const config = {
-    entry: ['babel-polyfill','./index.js'],
+    entry: [
+            'react-hot-loader',
+            'webpack-hot-middleware/client?reload=true',
+            'webpack/hot/only-dev-server',
+            'babel-polyfill',
+            './index.js'
+        ],
+    debug: true,
+    devTool: 'inline-source-map',
+    target: 'web',
     output: {
+        path: __dirname + '/dist',
         filename: 'bundle.js',
-        publicPath: "dist/",
-
+        publicPath: '/',
     },
      module: {
         loaders: [
@@ -26,15 +39,29 @@ const config = {
                 ]
             },
             {
-                test: /\.(png|jpg|woff|woff2|eot|ttf)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                test: /\.(png|jpg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 exclude: /node_modules/,
                 loader: 'file-loader?name=images/[hash].[ext]'
+            },
+            {
+                test: /\.ttf$/,
+                exclude: /node_modules/,
+                loader: 'file-loader?name=fonts/[hash].[ext]'
             },
         ],
     },
     plugins: [
         new ExtractTextPlugin('public/stylesheet.css', {
             allChunks: true
+        }),
+        new webpack.HotModuleReplacementPlugin(),
+        new HtmlWebpackPlugin({
+            template: 'index.html',
+            minify: { 
+                        removeComments: !isDevelopment,
+                        collapseWhitespace: !isDevelopment
+                    },
+            inject: true
         })
     ]
 };
